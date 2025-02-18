@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfect IT Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-blue-950">
+
+    <header class="flex justify-between items-center p-5 shadow-md ">
+        <div class="text-2xl font-bold text-blue-800">
+            Perfect IT Center
+        </div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="index.html" class="text-white text-lg hover:text-lime-600">Home</a></li>
+            <li><a href="about.html" class="text-white text-lg hover:text-lime-600">About Us</a></li>
+            <li><a href="courses.html" class="text-white text-lg hover:text-lime-600">Courses</a></li>
+            <li><a href="contact.html" class="text-white text-lg hover:text-lime-600">Contact Us</a></li>
+            <li><a href="login.html" class="text-white text-lg hover:text-lime-600">Log in</a></li>
+            <li><a href="signin.html" id="show-signup" class="text-white text-lg hover:text-lime-600">Sign in</a></li>
+          </ul>
+        </nav>
+    </header> 
+
+    <!-- Sign Up Section -->
+    <div id="signup-section" class="flex items-center justify-center min-h-screen hidden">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Sign Up</h2>
+        <form class="space-y-6">
+            <div>
+                <label for="signup-username" class="block text-sm font-semibold text-gray-700">Username</label>
+                <input id="signup-username" name="signup-username" type="text" placeholder="Enter your username" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <div>
+                <label for="signup-email" class="block text-sm font-semibold text-gray-700">Email</label>
+                <input id="signup-email" name="signup-email" type="email" placeholder="Enter your email" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <div>
+                <label for="signup-password" class="block text-sm font-semibold text-gray-700">Password</label>
+                <input id="signup-password" name="signup-password" type="password" placeholder="Enter your password" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-800 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+        // Hide the signup section by default
+        document.getElementById('signup-section').classList.add('hidden');
+
+        // Show signup section when Sign in button is clicked
+        document.getElementById('show-signup').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            document.getElementById('signup-section').classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>
